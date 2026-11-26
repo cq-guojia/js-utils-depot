@@ -1,7 +1,7 @@
 {
   "identity": {"uuid": "8d557c6d-7c93-43ac-8c73-5d623e82e1c6"},
   "tasks": {
-    "20261126-0817-372e-确定底层框架与工具域方案": {"category": "建设", "created": "2026-11-26 08:17:08", "creator": "8d557c6d-7c93-43ac-8c73-5d623e82e1c6", "creator_name": "GuoJia-Agent", "finished": null, "owner": "8d557c6d-7c93-43ac-8c73-5d623e82e1c6", "owner_name": "GuoJia-Agent", "started": "2026-11-26 08:17:08", "status": "doing", "tags": ["架构", "工具域", "开源选型", "文档"], "title": "确定底层框架与工具域方案", "updated": "2026-11-26 08:30:22", "worklog": "worklog/202611/26-0817-372e-确定底层框架与工具域方案.md"}
+    "20261126-0817-372e-确定底层框架与工具域方案": {"category": "建设", "created": "2026-11-26 08:17:08", "creator": "8d557c6d-7c93-43ac-8c73-5d623e82e1c6", "creator_name": "GuoJia-Agent", "finished": null, "owner": "8d557c6d-7c93-43ac-8c73-5d623e82e1c6", "owner_name": "GuoJia-Agent", "started": "2026-11-26 08:17:08", "status": "doing", "tags": ["架构", "工具域", "开源选型", "文档"], "title": "确定底层框架与工具域方案", "updated": "2026-11-26 08:40:33", "worklog": "worklog/202611/26-0817-372e-确定底层框架与工具域方案.md"}
   },
   "version": "20261022000000"
 }
