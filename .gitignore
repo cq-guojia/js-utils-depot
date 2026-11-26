@@ -1,4 +1,43 @@
+# 依赖与构建产物
 node_modules/
+.pnpm-store/
 dist/
 *.tsbuildinfo
+*.log
+coverage/
+.nyc_output/
+
+# 包管理器固定 pnpm：防止 npm/yarn 锁文件混入
+package-lock.json
+yarn.lock
+
+# 本地环境配置
+.env
+.env.local
+.env.*.local
+
+# AI Agent / IDE 本地目录：多 Agent 共存，整目录忽略
+.codebuddy/
+.workbuddy/
+.trae/
+.claude/
+.cursor/
+.vscode/
+.qoder/
+.windsurf/
+.codeium/
+.comate/
+.lingma/
+.continue/
+.zed/
+.idea/
+.aider*
+.dsh/
+.deepseek-harness/
+.mcp.json
+.playwright-mcp/
+
+# 系统文件
 .DS_Store
+Thumbs.db
+*.tgz
