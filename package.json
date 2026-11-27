@@ -1,20 +1,35 @@
 {
   "name": "js-utils-depot",
-  "version": "0.1.5",
-  "description": "通用 JS 工具集：纯函数、零运行时依赖，不绑定宿主 API。",
+  "version": "0.1.6",
+  "description": "通用 JS 工具集：字符串纯函数与基于 Day.js 的时间能力，按能力子路径按需引入。",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cq-guojia/js-utils-depot.git"
   },
   "type": "module",
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/dayjs/plugin/*.js",
+    "./dist/dayjs/locale/*.js"
+  ],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./dayjs": {
+      "types": "./dist/dayjs/index.d.ts",
+      "import": "./dist/dayjs/index.js"
+    },
+    "./dayjs/locale/zh-cn": {
+      "types": "./dist/dayjs/locale/zh-cn.d.ts",
+      "import": "./dist/dayjs/locale/zh-cn.js"
+    },
+    "./dayjs/plugin/*": {
+      "types": "./dist/dayjs/plugin/*.d.ts",
+      "import": "./dist/dayjs/plugin/*.js"
     }
   },
   "files": [
@@ -28,5 +43,8 @@
   },
   "devDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "dayjs": "1.11.23"
   }
 }

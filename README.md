@@ -1,12 +1,13 @@
 # js-utils-depot
 
-通用 JS 工具集：纯函数、零运行时依赖，不绑定宿主 API。
+通用 JS 工具集：字符串纯函数与基于 Day.js 的时间能力，按能力子路径按需引入。
 
 ## 设计
 
-- 一级域为 `string` 基础处理与 `datetime` 时间处理；相对时间文案 `relative-time` 属于 `datetime`，不单独开域。
-- 一函数一文件、一子路径；根入口只保留对现有 `truncateBytes` 的兼容，不做全量聚合。
-- 相对时间默认中文，其他语言由调用方传文案表；没有全局语言状态，不静态引入语言包。
+- 一级域为 `string` 基础处理与 `dayjs` 时间处理；时间层整体由 Day.js 提供，不另设 `datetime` 域。
+- 根入口只保留对现有 `truncateBytes` 的兼容；`string` 与 `dayjs` 各自独立，不互相引入。
+- 时间默认英文；中文语言包与每个插件（官方或自有）各占一个子路径，用哪个引哪个，不用的不进 bundle。
+- 自定义时间能力以 Day.js 插件形式提供，支持链式调用；静态方法按 Day.js 插件模型导出。
 - 设计依据：[设计总览](docs/architecture/overview.md)、[目录结构](docs/architecture/directory-structure.md)。
 
 ## 当前内容
@@ -31,5 +32,5 @@ truncateBytes('a😀b', 5) // 'a…'
 ## 口径
 
 - 包管理器：pnpm
-- 运行时依赖：零
+- 运行时依赖：`string` 无；`dayjs` 域依赖 `dayjs@1.11.23`
 - 源码：TypeScript，发布 ESM 与类型声明
